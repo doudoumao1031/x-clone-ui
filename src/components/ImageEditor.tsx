@@ -64,10 +64,10 @@ const ImageEditor = ({onClose, previewURL, settings, onSettingsChange}:{
         </div>
         {/* IMAGE CONTAINER */}
         <div className="w-[600px] h-[600px] flex items-center justify-center">
-          <NextImage src={previewURL} alt="" width={600} height={600} 
+          <NextImage src={previewURL} alt="" width={600} height={600}
             className={`w-full ${
               settings.type === "original" 
-                ? "h-full object-cover" 
+                ? "h-full object-contain" 
                 : settings.type === "square" 
                 ? "aspect-square object-cover" 
                 : "aspect-video object-cover"
